@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<script>
+	$(document).ready(function(){
+	 	$('.addClass').click(function(){
+	 		$('#1st').addClass("red");
+	 	})
+
+	 	$('.slideToggle').click(function(){
+	 		$('#2nd').slideToggle();
+	 	})
+
+// append means change the content of the existing html copy
+		$('.append').click(function(){
+	 		$('#3rd').append("This has been appended!!!");
+	 	})
+// --------------------------------------------start here with others------
+
+// this .after will print something outside or AFTER the <p> tag or <div> etc. (SEE INSPECT ELEMENT)
+		$('.after').click(function(){
+	 		$('#4th').after("WAHOO!!!");
+	 	})
+
+	 	$('.attr').click(function(){
+	 		$("#5th img").attr('src', 'cliff.jpg');
+	 	})
+
+		$('.before').click(function(){
+	 		$("#6th").before("OMG! This is hard because...");
+	 	})
+
+// THIS FUNCTION .html WILL EXECUTE when you click on the button. pass in the id#7th.html (then in here is the text you want to replace it with!!!)
+		$('.html').click(function(){
+	 		$('#7th').html ("This is the html method, which replaces all the text inside my p tag");
+	 	})
+
+
+// THIS FUNCTION .text WILL EXECUTE when you click on the button. pass in the id#8th.text 
+// (then in here is the text you want to replace it with!!!)
+	 	$('.text').click(function(){
+	 		$('#8th').text ("This is the text method that I love.");
+	 	})
+
+
+	 	$('.val').click(function(){
+	 		alert($('input:text').val());
+	 	})
+
+// .hide is the name of the jquery effects function that we are telling to exectue when we click by putting .click, and then we are telling it which ID or CLASS (of the html) to hide by writing $(#10th) then we execute the hide function by putting .hide(); so when we click on the button, that has the id of #10th, it will hide.
+	 	$('.hide').click(function(){
+	 		$("#10th").hide();
+	 	})
+
+
+  		$(".show").click(function(){
+    		$("#10th").show();
+ 		})
+
+
+  		$(".slideUp").click(function(){
+   			$("#12th").slideUp();
+  		});
+
+
+  		$(".slideDown").click(function(){
+    			$("#12th").slideDown();
+    	});
+
+
+  		$(".fadeIn").click(function(){
+    		$("#13th img").fadeIn();
+ 		})
+
+ 		$(".fadeOut").click(function(){
+    		$("#13th img").fadeOut();
+ 		})
+
+
+		$('.focus').click(function(){
+    		$('#15th').focus();
+ 		});
+
+
+		$('.click').click(function(){
+    		$('.focus').click();
+ 		});
+
+ });
+	</script>
+	<meta charset = "utf-8">
+	<title>basic1</title>
+	<link rel="stylesheet" type="text/css" href="basic1b.css">
+</head>
+	<body>
+
+		<div id="container">
+
+			<div class="box">
+				<h2>addClass</h2>
+				<p id="1st">This is my paragraph</p>
+				<button class="addClass" type="button">Click Here!</button> 
+			</div>
+
+			<div class="box">
+				<h2>slideToggle</h2>
+				<p>Toggling with an image</p>
+				<p id="2nd"><img src="marica_staple.jpg"></p>
+				<button class="slideToggle" type="button">Click Here!</button> 
+			</div>
+
+			<div class="box">
+				<h2>append</h2>
+				<p id="3rd">This is my paragraph</p>
+				<button class="append" type="button">Click Here!</button> 
+			</div>
+
+			<div class="box">
+				<h2>after</h2>
+				<p id="4th">This is my paragraph</p>
+				<button class="after" type="button">Click Here!</button> 
+			</div>
+
+			<div class="box">
+				<h2>attr</h2>
+				<p id="5th">
+					<img src="Maricaoncliff.jpg">
+				</p>
+				<button class="attr" type="button">Click Here!</button> 
+			</div>
+
+			<div class="box">
+				<h2>before</h2>
+				<p id="6th">This is the ".before" method</p>
+				<button class="before" type="button">Click Here!</button> 
+			</div>
+
+			<div class="box">
+				<h2>html</h2>
+				<p id="7th">This is the "html" method in jQuery</p>
+				<button class="html" type="button">Click Here!</button> 
+			</div>
+
+			<div class="box">
+				<h2>text</h2>
+				<p id="8th">This is the ".text" method in jQuery</p>
+				<button class="text" type="button">Click Here!</button> 
+			</div>
+
+			<div class="box">
+				<h2>val</h2>
+				<p>This is the ".val" method in jQuery</p>
+				Firstname: <input type="text" name="fname" value=""><br>
+				Lastname: <input type="text" name="lname" value=""><br><br>
+				<button class="val">Return the value of the 1st input field</button>
+			</div>
+
+			<div class="box">
+				<h2>hide and show</h2>
+				<p id="10th">This is the ".hide" and ".show" method in jQuery</p>
+				<button class="hide" type="button">Click Here to make the above paragraph disappear!</button> 
+				<button class="show" type="button">Click Here to make the above paragraph reappear!</button> 
+			</div>
+
+			<div class="box">
+				<h2>slideUp and slideDown</h2>
+				<p id="12th">This is the ".slideUp and .slideDown" method in jQuery</p>
+				<button class="slideUp" type="button">Click to Slide UP!</button>
+				<button class="slideDown" type="button">Click to Slide DOWN!</button>
+			</div>
+
+			<div class="box">
+				<h2>fadeIn and fadeOut</h2>
+				<p id="13th">This is the ".fadeIn and .fadeOut" method in jQuery
+				<img src="flowers.jpg" alt="picture of flowers">
+				</p>
+				<button class="fadeIn" type="button">Click to Fade In!</button>
+				<button class="fadeOut" type="button">Click to Fade Out!</button>
+			</div>
+
+			<div class="box">
+				<h2>focus</h2>
+				<p >This is the ".focus" method in jQuery</p>
+				<input type="text" id="15th">
+				<button class="focus" type="button">Click Here!</button> 
+			</div>
+
+			<div class="box">
+				<h2>click</h2>
+				<p id="16th">This is my paragraph for click</p>
+				<button class="click" type="button">Click Here!</button> 
+			</div>
+
+
+		</div>
+	</body>
+</html>
